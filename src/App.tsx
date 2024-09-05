@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css"; // For styles if you want to add them separately
+import "./App.css";
 
 const App = () => {
   const [board, setBoard] = useState<string[][]>(
