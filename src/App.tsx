@@ -1,15 +1,15 @@
 import { useState } from "react";
 import "./App.css";
 
+const initBoard = () => Array(3).fill(Array(3).fill(""));
+
 const App = () => {
-  const [board, setBoard] = useState<string[][]>(
-    Array(3).fill(Array(3).fill(""))
-  );
-  const [typePlayer, setTypePlayer] = useState("x");
+  const [board, setBoard] = useState<string[][]>(initBoard());
+  const [typePlayer, setTypePlayer] = useState<"x" | "o">("x");
 
   const play = (rowIndex: number, colIndex: number) => {
     if (board[rowIndex][colIndex] !== "") {
-      alert("Try again!");
+      alert("Wrong movement, try again!");
       return;
     }
 
@@ -83,6 +83,7 @@ const App = () => {
         board[a.r][a.c] === board[c.r][c.c]
       ) {
         alert(`${board[a.r][a.c].toUpperCase()} wins!`);
+        setBoard(initBoard());
       }
     });
   };
@@ -96,17 +97,13 @@ const App = () => {
               key={`${rowIndex}-${colIndex}`}
               className="col2"
               onClick={() => play(rowIndex, colIndex)}
-              style={{
-                width: "100px",
-                height: "100px",
-                border: "1px solid black",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
             >
-              {col === "x" && <img src="/assets/x.png" alt="X" />}
-              {col === "o" && <img src="/assets/o.png" alt="O" />}
+              {col === "x" && (
+                <img style={{ width: "40px" }} src="/assets/x.png" alt="X" />
+              )}
+              {col === "o" && (
+                <img style={{ width: "40px" }} src="/assets/o.png" alt="O" />
+              )}
             </div>
           ))}
         </div>
