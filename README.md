@@ -15,3 +15,5 @@ A simple **Tic-Tac-Toe** game built with **React**. This project demonstrates th
 1. Clone the repository:
    ```bash
    git clone <repo-url>
+   npm i
+   npm run dev
