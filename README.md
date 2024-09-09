@@ -1,5 +1,3 @@
-### 3. Tic-Tac-Toe (React)
-```markdown
 # Tic-Tac-Toe Game
 
 ## Description
