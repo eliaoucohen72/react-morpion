@@ -14,6 +14,6 @@ A simple **Tic-Tac-Toe** game built with **React**. This project demonstrates th
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/eliaoucohen72/react-morpion.git
    npm i
    npm run dev
