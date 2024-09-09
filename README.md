@@ -1,7 +1,7 @@
 # Tic-Tac-Toe Game
 
 ## Description
-A simple **Tic-Tac-Toe** game built with **React**. This project demonstrates the use of React for building interactive UIs and handling game logic.
+A simple **Tic-Tac-Toe** game built with **React** and **Vite.js**. This project demonstrates the use of React for building interactive UIs and handling game logic.
 
 ## Features
 - Two-player game
